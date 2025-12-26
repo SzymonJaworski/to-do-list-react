@@ -5,12 +5,12 @@ const Tasks = ({ tasks, doneTasksHidden }) => (
         {tasks.map(task => (
             <li
                 key={task.id}
-                className={`list__item ${task.done && doneTasksHidden ? "list__item--hidden" : ""}`}
+                className={`list__item ${task.check && doneTasksHidden ? "list__item--hidden" : ""}`}
             >
                 <button className="list__button list__button--check">
-                    {task.done ? "✓" : ""}
+                    {task.check ? "✓" : ""}
                 </button>
-                <span className={`list__task ${task.done ? "list__task--done" : ""}`}>
+                <span className={`list__task ${task.check ? "list__task--done" : ""}`}>
                     {task.content}
                 </span>
                 <button className="list__button list__button--delete">🗑</button>
