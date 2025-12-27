@@ -16,10 +16,9 @@ const Buttons = ({ tasks, doneTasksHidden }) => (
                     Ukończ wszystkie
                 </button>
             </>
-        )}
+        )};
     </div>
 );
-
 
 
 export default Buttons;
