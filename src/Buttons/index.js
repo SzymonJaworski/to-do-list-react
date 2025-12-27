@@ -6,8 +6,7 @@ const Buttons = ({ tasks, doneTasksHidden }) => (
         {tasks.length > 0 && (
             <>
                 <button className="section__button">
-                    {doneTasksHidden ? "Pokaż" : "Ukryj"}
-                    ukończone
+                    {doneTasksHidden ? "Pokaż" : "Ukryj"} ukończone
                 </button>
                 <button
                     className="section__button"
