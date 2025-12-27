@@ -1,3 +1,22 @@
+#  To-Do List — React Version
+
+My task list application refactored into **React** as a major milestone in my frontend development journey. This project focuses on component-based architecture and a declarative approach to building user interfaces.
+
+##  Key Features
+* **Components**: UI split into reusable parts (Section, Tasks, Buttons, Header).
+* **Props**: Efficient data flow from the App component down to child elements.
+* **BEM**: Consistent CSS naming methodology for professional styling.
+* **Logic**: Dynamic button states (disabled) and conditional panel rendering.
+
+
+##  What's inside?
+![Animation](https://github.com/user-attachments/assets/6a226079-90bc-4dd9-bd3e-58bf6dd7df2d)
+
+
+## Demo
+https://szymonjaworski.github.io/to-do-list-react/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
