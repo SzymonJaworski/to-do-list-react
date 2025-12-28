@@ -1,4 +1,4 @@
-.section__panel {
+.buttons__panel {
     display: flex;
     flex-wrap: wrap;
 }
@@ -19,7 +19,7 @@
     }
 }
 
-.section__button {
+.buttons__button {
     margin: 0 0 0 20px;
     color: teal;
     background: transparent;
@@ -29,21 +29,21 @@
 }
 
 @media (max-width: 767px) {
-    .section__button {
+    .buttons__button {
         flex-basis: 100%;
         margin: 10px;
     }
 }
 
-.section__button:disabled {
+.buttons__button:disabled {
     color: #ccc;
     cursor: not-allowed;
 }
 
-.section__button:hover {
+.buttons__button:hover {
     color: hsl(180, 100%, 40%);
 }
 
-.section__button:active {
+.buttons__button:active {
     color: hsl(180, 100%, 45%);
 }
