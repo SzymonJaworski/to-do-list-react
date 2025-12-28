@@ -9,7 +9,7 @@ My task list application refactored into **React** as a major milestone in my fr
 * **Logic**: Dynamic button states (disabled) and conditional panel rendering.
 
 
-## 💡 What's inside?
+##  What's inside?
 ![Animation](https://github.com/user-attachments/assets/6a226079-90bc-4dd9-bd3e-58bf6dd7df2d)
 
 
