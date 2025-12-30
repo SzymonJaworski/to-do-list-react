@@ -4,7 +4,8 @@ import Tasks from "./List";
 import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
-import Container from "./Container"
+import Container from "./Container";
+import { GlobalStyle } from "./GlobalStyle";
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
@@ -55,6 +56,7 @@ function App() {
 
   return (
     <Container>
+      <GlobalStyle />
       <main>
         <Header title="Lista zadań" />
         <Section
