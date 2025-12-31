@@ -8,12 +8,24 @@ const AuthorPage = () => (
         <Section
             title="Szymon Jaworski"
             body={
-                <p>
-                    Moją pasją jest <strong>muzyka</strong>. Gram na klawiszach od 20 lat,
-                    komponuję i aranżuję. Muzyka jest dla mnie niezwykle ważna!
-                </p>
+                <>
+                    <p>
+                        Cześć! Mam 22 lata i jestem pasjonatem programowania, który nieustannie dąży
+                        do pogłębiania swojej wiedzy w świecie technologii webowych.
+                    </p>
+                    <p>
+                        Moja przygoda z kodem to ciągłe odkrywanie nowych możliwości, jakie dają
+                        nowoczesne frameworki, a każdy kolejny projekt to dla mnie okazja do
+                        rozwiązywania ciekawych problemów i doskonalenia warsztatu.
+                    </p>
+                    <p>
+                        Skupiam się na tworzeniu przejrzystych i funkcjonalnych aplikacji,
+                        wierząc, że technologia powinna przede wszystkim służyć ludziom.
+                    </p>
+                </>
             }
         />
     </Container>
 );
+
 export default AuthorPage;
