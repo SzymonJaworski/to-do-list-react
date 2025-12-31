@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
 export const StyledSection = styled.section`
-    background-color: white;
+    background: white;
     margin: 10px 0;
-    box-shadow: 0 0 5px rgb(231, 229, 229);
+    box-shadow: 0 0 5px #ddd;
 `;
 
-export const SectionHeaderContainer = styled.div`
+export const SectionHeader = styled.header`
+    border-bottom: 1px solid #ddd;
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 20px;
-    align-items: center;
-    border-bottom: 1px solid rgb(231, 229, 229);
     justify-content: space-between;
+    align-items: center;
     padding: 20px;
 
     @media (max-width: 767px) {
@@ -21,8 +21,8 @@ export const SectionHeaderContainer = styled.div`
 `;
 
 export const Title = styled.h2`
+    font-size: 20px;
     margin: 0;
-    font-size: 21px;
 `;
 
 export const SectionBody = styled.div`

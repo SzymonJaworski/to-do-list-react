@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     html {
@@ -10,9 +10,14 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        font-family: "Montserrat", sans-serif;
-        background: rgb(231, 229, 229);
-        word-break: break-word;
+        background: #eee;
+        font-family: 'Montserrat', sans-serif;
         margin: 0;
     }
+`;
+
+export const Container = styled.main`
+    max-width: 900px;
+    margin: 0 auto; 
+    padding: 20px;
 `;

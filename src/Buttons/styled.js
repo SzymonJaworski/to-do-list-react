@@ -6,28 +6,24 @@ export const ButtonsPanel = styled.div`
 `;
 
 export const Button = styled.button`
-    margin: 0 0 0 20px;
-    color: teal;
     background: transparent;
+    color: teal;
     border: none;
+    margin: 0 0 0 20px;
+    transition: filter 0.3s;
     cursor: pointer;
-    transition: 0.5s;
-
-    @media (max-width: 767px) {
-        flex-basis: 100%;
-        margin: 10px;
-    }
 
     &:hover {
-        color: hsl(180, 100%, 40%);
-    }
-
-    &:active {
-        color: hsl(180, 100%, 45%);
+        filter: brightness(120%);
     }
 
     &:disabled {
         color: #ccc;
         cursor: not-allowed;
+    }
+
+    @media (max-width: 767px) {
+        flex-basis: 100%;
+        margin: 10px;
     }
 `;

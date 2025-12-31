@@ -1,0 +1,12 @@
+[
+    {
+        "content": "Zrobić zakupy",
+        "done": false,
+        "id": 1
+    },
+    {
+        "content": "Pójść na spacer",
+        "done": false,
+        "id": 2
+    }
+]

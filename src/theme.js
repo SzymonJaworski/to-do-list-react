@@ -2,9 +2,9 @@ export const theme = {
     color: {
         teal: "#008080",
         white: "#FFFFFF",
-        lightGray: "#DDD",
-        silver: "#CCC",
-        altTeal: "#009999",
+        red: "#db2222",
+        green: "#228b22",
+        background: "#eee",
     },
     breakpoint: {
         mobileMax: 767,

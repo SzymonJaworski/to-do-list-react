@@ -1,16 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
-
-const getTasksFromLocalStorage = () => {
-    const tasks = localStorage.getItem("tasks");
-    return tasks ? JSON.parse(tasks) : [];
-};
+import { nanoid } from "@reduxjs/toolkit";
 
 const tasksSlice = createSlice({
     name: 'tasks',
     initialState: {
-        tasks: getTasksFromLocalStorage(),
+        tasks: JSON.parse(localStorage.getItem("tasks")) || [],
         hideDone: false,
+        loading: false,
     },
+
     reducers: {
         addTask: ({ tasks }, { payload: task }) => {
             tasks.push(task);
@@ -24,26 +22,43 @@ const tasksSlice = createSlice({
         },
         removeTask: ({ tasks }, { payload: taskId }) => {
             const index = tasks.findIndex(({ id }) => id === taskId);
-            tasks.splice(index, 1);
+            if (index !== -1) {
+                tasks.splice(index, 1);
+            }
         },
         setAllDone: ({ tasks }) => {
-            tasks.forEach(task => {
-                task.done = true;
-            });
+            tasks.forEach(task => { task.done = true; });
+        },
+        fetchExampleTasks: (state) => {
+            state.loading = true;
+        },
+        fetchExampleTasksSuccess: (state, { payload: tasks }) => {
+            const tasksWithUniqueIds = tasks.map(task => ({
+                ...task,
+                id: nanoid(),
+            }));
+
+            state.tasks = [...state.tasks, ...tasksWithUniqueIds];
+            state.loading = false;
+        },
+        fetchExampleTasksError: (state) => {
+            state.loading = false;
         },
     },
 });
 
 export const {
-    addTask,
-    toggleHideDone,
-    toggleTaskDone,
-    removeTask,
-    setAllDone
+    addTask, toggleHideDone, toggleTaskDone, removeTask,
+    setAllDone, fetchExampleTasks, fetchExampleTasksSuccess, fetchExampleTasksError
 } = tasksSlice.actions;
 
-export const selectTasksState = (state) => state.tasks;
-export const selectTasks = (state) => selectTasksState(state).tasks;
-export const selectHideDone = (state) => selectTasksState(state).hideDone;
+const selectTasksState = state => state.tasks;
+
+export const selectTasks = state => selectTasksState(state).tasks;
+export const selectHideDone = state => selectTasksState(state).hideDone;
+export const selectLoading = state => selectTasksState(state).loading;
+
+export const getTaskById = (state, taskId) =>
+    selectTasks(state).find(({ id }) => id == taskId);
 
 export default tasksSlice.reducer;
