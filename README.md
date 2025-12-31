@@ -1,20 +1,30 @@
-#  To-Do List — React Version
+# To-Do List — React Version
 
-My task list application refactored into **React** as a major milestone in my frontend development journey. This project focuses on component-based architecture and a declarative approach to building user interfaces.
-
-##  Key Features
-* **Components**: UI split into reusable parts (Section, Tasks, Buttons, Header).
-* **Props**: Efficient data flow from the App component down to child elements.
-* **BEM**: Consistent CSS naming methodology for professional styling.
-* **Logic**: Dynamic button states (disabled) and conditional panel rendering.
+My task list application refactored into **React** as a major milestone in my frontend development journey. This project focuses on component-based architecture, state management, and a declarative approach to building user interfaces.
 
 
-##  What's inside?
-![Animation](https://github.com/user-attachments/assets/6a226079-90bc-4dd9-bd3e-58bf6dd7df2d)
+## Key Features
+* **State Management**: Using **Redux Toolkit** for predictable state updates across the app.
+* **Asynchronous Logic**: Side effects like fetching example tasks handled by **Redux-Saga**.
+* **Dynamic Routing**: Multi-page experience with **React Router**, including dedicated task detail views.
+* **Styled Components**: Modern styling with CSS-in-JS, featuring a centered, responsive layout.
+* **LocalStorage**: Tasks are persisted in the browser, so you never lose your data.
+* **Search & Filter**: Real-time task filtering using URL query parameters.
 
+
+## Technologies
+* **React** (Hooks, Router)
+* **Redux (Toolkit & Saga)**
+* **Styled Components**
+* **JavaScript** (ES6+)
 
 ## Demo
 https://szymonjaworski.github.io/to-do-list-react/
+
+
+##  What's inside?
+![Animation](https://github.com/user-attachments/assets/cf9fca3c-f4f3-4348-8f6e-3b52c05b3618)
+
 
 
 # Getting Started with Create React App
